@@ -1,0 +1,735 @@
+# MASTER WEBSITE PROMPT — AI DEEP WORDS
+
+## Enterprise Arabic AI Infrastructure Platform
+
+### Premium Silicon Valley-Level Website Direction
+
+Build a world-class, cinematic, enterprise-grade bilingual website (English-first with Arabic support) for:
+
+# AI Deep Words
+
+An Arabic AI infrastructure company specializing in:
+
+* Arabic voice datasets
+* NLP annotation pipelines
+* medical-grade Arabic linguistic assets
+* dialect-aware AI data
+* enterprise Arabic AI infrastructure
+* conversational AI datasets
+* speech intelligence infrastructure
+
+The company is NOT a generic AI startup.
+It is NOT a chatbot company.
+
+This company should feel like:
+
+* ElevenLabs meets Palantir
+* Deepgram meets Vercel
+* Enterprise infrastructure for Arabic AI
+
+The visual identity must communicate:
+
+* trust
+* scale
+* intelligence
+* production-grade infrastructure
+* linguistic expertise
+* futuristic enterprise technology
+
+The website should feel:
+
+* cinematic
+* premium
+* calm
+* intelligent
+* sophisticated
+* minimal
+* futuristic without being flashy
+
+Avoid:
+
+* cheap startup aesthetics
+* crypto/neon overload
+* exaggerated cyberpunk visuals
+* cartoonish AI graphics
+* template-like SaaS design
+
+---
+
+# BRAND POSITIONING
+
+---
+
+Primary Positioning:
+
+"Building the Linguistic Infrastructure for Global AI"
+
+Secondary Positioning:
+
+"Production-grade Arabic AI data infrastructure across 22+ countries and 32+ dialects."
+
+Core Narrative:
+
+Arabic is one of the world's most spoken languages, yet remains critically underrepresented in AI training infrastructure.
+
+AI Deep Words exists to solve this permanently through:
+
+* enterprise Arabic datasets
+* dialect-aware speech infrastructure
+* medical-grade NLP assets
+* scalable annotation pipelines
+* secure AI data operations
+
+This is an infrastructure company powering the next generation of Arabic AI.
+
+---
+
+# TARGET AUDIENCE PRIORITY
+
+---
+
+Primary:
+
+* Enterprise AI companies
+* Speech AI companies
+* LLM developers
+* Government AI initiatives
+* Healthcare AI companies
+
+Secondary:
+
+* AI startups
+* Research labs
+* NLP teams
+* Conversational AI builders
+
+Tertiary:
+
+* Developers
+* MLOps engineers
+* Speech researchers
+
+---
+
+# DESIGN STYLE
+
+---
+
+Design Inspiration:
+
+* ElevenLabs
+* Palantir
+* Vercel
+* Stripe
+* Deepgram
+* Linear
+* Raycast
+
+Visual Style:
+
+* dark premium UI
+* cinematic gradients
+* subtle glassmorphism
+* minimal layouts
+* large typography
+* smooth motion
+* sophisticated whitespace
+* premium enterprise feel
+
+The UI should feel:
+
+* expensive
+* modern
+* precise
+* scalable
+* intelligent
+
+---
+
+# COLOR SYSTEM
+
+---
+
+Primary Background:
+#050505
+#0B0F14
+#0F1720
+
+Accent Colors:
+Deep Blue Glow
+Soft Cyan
+Muted Purple
+Subtle Emerald
+
+Avoid oversaturated colors.
+
+Use elegant gradients and soft ambient glows.
+
+---
+
+# TYPOGRAPHY
+
+---
+
+English:
+
+* Inter
+* Space Grotesk
+
+Arabic:
+
+* IBM Plex Sans Arabic
+* Alexandria
+
+Typography Style:
+
+* bold headlines
+* large hero typography
+* spacious layout
+* premium editorial hierarchy
+
+---
+
+# MOTION & INTERACTIONS
+
+---
+
+Motion style should be:
+
+* smooth
+* premium
+* cinematic
+* subtle
+
+Use:
+
+* Framer Motion
+* soft fade transitions
+* waveform animations
+* hover glows
+* parallax movement
+* animated grid backgrounds
+* subtle AI pulse effects
+
+Avoid:
+
+* aggressive animations
+* distracting movement
+* overdone futuristic effects
+
+---
+
+# WEBSITE STRUCTURE
+
+---
+
+# 1. HOMEPAGE
+
+Purpose:
+Create instant trust and establish category leadership.
+
+---
+
+## HERO SECTION
+
+---
+
+Large cinematic hero section.
+
+Background:
+
+* animated waveform
+* subtle moving gradients
+* ambient glow
+* soft AI particle motion
+
+Headline:
+
+"Building the Linguistic Infrastructure for Global AI"
+
+Subheadline:
+
+"Production-grade Arabic voice, NLP, and medical datasets powering the next generation of speech and language AI across 22+ countries and 32+ dialects."
+
+Primary CTA:
+
+* Start a Project
+
+Secondary CTA:
+
+* Explore Services
+
+Third CTA:
+
+* Listen to Voice Samples
+
+Hero Metrics:
+
+* 22+ Arab Countries
+* 32+ Arabic Dialects
+* 4,000+ Hours Voice Data
+* 15M+ Words Dataset
+* 97.4% Accuracy Rate
+
+Add:
+
+* interactive waveform
+* playable Arabic voice samples
+* dialect switching
+* premium audio visualizer
+
+---
+
+## TRUST SECTION
+
+---
+
+Display:
+
+* enterprise trust indicators
+* compliance badges
+* AI ecosystem compatibility
+
+Include:
+
+* HIPAA
+* GDPR
+* Secure Infrastructure
+* Human-in-the-Loop QA
+
+---
+
+## THE ARABIC AI GAP
+
+---
+
+Split-section storytelling.
+
+Left:
+Problem.
+
+Right:
+AI Deep Words solution.
+
+Problem points:
+
+* Arabic dialect fragmentation
+* lack of production-grade datasets
+* weak dialect coverage
+* poor medical/legal Arabic AI support
+
+Solution points:
+
+* native speaker pipelines
+* dialect-aware QA
+* secure enterprise workflows
+* large-scale Arabic infrastructure
+
+Add animated infrastructure visualization.
+
+---
+
+## DATA PIPELINE VISUALIZATION
+
+---
+
+Animated flow:
+
+Collect
+→ Validate
+→ Annotate
+→ Multi-Layer QA
+→ Secure Processing
+→ Enterprise Delivery
+
+Use cinematic infrastructure-style graphics.
+
+---
+
+## SERVICES SECTION
+
+---
+
+Display services as enterprise infrastructure pillars.
+
+1. Voice Intelligence
+2. NLP Solutions
+3. Medical AI Infrastructure
+4. Dialect Annotation
+5. Speech Data Pipelines
+
+Each card:
+
+* premium icon
+* subtle motion
+* enterprise copywriting
+* hover animation
+
+---
+
+## INTERACTIVE PLAYGROUND
+
+---
+
+One of the MOST important sections.
+
+Features:
+
+* type text
+* choose dialect
+* choose voice tone
+* play generated audio
+
+Dialect examples:
+
+* Saudi Najdi
+* Saudi Hijazi
+* Gulf
+* Egyptian
+* Levantine
+* MSA
+
+Voice tone examples:
+
+* professional
+* customer support
+* sales
+* calm narration
+
+UI must feel:
+
+* premium
+* instant
+* responsive
+* elegant
+
+No login required.
+
+---
+
+## DATASET SCALE SECTION
+
+---
+
+Show:
+
+* dataset size
+* dialect coverage
+* voice hours
+* annotation categories
+* medical corpora
+* NLP assets
+
+Visualize data geographically across the Arab world.
+
+---
+
+## COMPETITIVE ADVANTAGE
+
+---
+
+Headline:
+"Why AI Deep Words"
+
+Key differentiators:
+
+* 32+ dialects
+* native speaker network
+* enterprise compliance
+* medical-grade assets
+* human-in-the-loop QA
+* scalable delivery
+* Arabic-first infrastructure
+
+---
+
+## INTEGRATIONS
+
+---
+
+Enterprise integrations section.
+
+Include:
+
+* REST APIs
+* HuggingFace
+* AWS SageMaker
+* Azure ML
+* Whisper
+* Kaldi
+* ESPnet
+* Coqui TTS
+
+Use animated integration cards.
+
+---
+
+## FINAL CTA
+
+---
+
+Large cinematic CTA.
+
+Headline:
+
+"Power Your Arabic AI Infrastructure"
+
+Buttons:
+
+* Start a Project
+* Contact Enterprise Sales
+
+---
+
+# 2. SERVICES PAGE
+
+---
+
+Dedicated sections for:
+
+* Voice Intelligence
+* NLP Solutions
+* Medical AI
+* Annotation Pipelines
+* Dialect Infrastructure
+
+Each service should include:
+
+* workflow
+* process visualization
+* dataset examples
+* enterprise benefits
+* compliance
+* delivery structure
+
+---
+
+# 3. DATASETS PAGE
+
+---
+
+Enterprise-grade dataset catalog.
+
+Features:
+
+* filtering
+* dialect selection
+* metadata preview
+* dataset statistics
+* export formats
+* coverage maps
+
+Must feel:
+
+* highly technical
+* structured
+* production-ready
+
+---
+
+# 4. DEVELOPERS PAGE
+
+---
+
+Developer-first experience inspired by:
+
+* Stripe
+* Vapi
+* Deepgram
+
+Include:
+
+* API snippets
+* SDK examples
+* response speed
+* authentication flow
+* infrastructure architecture
+* endpoint explorer
+
+Languages:
+
+* Python
+* Node.js
+* REST API
+
+---
+
+# 5. DOCS PAGE
+
+---
+
+Modern technical documentation.
+
+Features:
+
+* sidebar navigation
+* search
+* API references
+* code examples
+* SDK installation
+* webhook documentation
+
+Style:
+
+* clean
+* readable
+* highly technical
+
+---
+
+# 6. ABOUT PAGE
+
+---
+
+Mission-driven storytelling.
+
+Position company as:
+"The infrastructure layer powering Arabic AI."
+
+Include:
+
+* mission
+* vision
+* linguistic impact
+* future of Arabic AI
+* infrastructure philosophy
+
+---
+
+# TEAM SECTION
+
+---
+
+Use premium monochrome portraits.
+
+Display:
+
+Head of Technology — Asim Ibrahim
+Leads data engineering, automation pipelines, and secure infrastructure — including diarization tooling, encrypted storage, PII workflows, and enterprise delivery systems.
+
+Head of Delivery & Executive Director — Abdulaziz Al-Tamri
+Leads company strategy, enterprise partnerships, and large-scale Arabic AI data programs — aligning delivery, security, and measurable quality outcomes across every engagement.
+
+Head of Linguistics — Muath Al-Hulwani
+Directs dialect coverage, linguistic QA, and annotation standards — ensuring accurate representation across 32+ Arabic dialects using native-speaker validation workflows.
+
+Project Management — Abdullah Abdullatif
+Drives operational coordination, contributor workflows, milestone execution, and delivery management across enterprise Arabic AI data programs.
+
+---
+
+# 7. CAREERS PAGE
+
+---
+
+Modern AI-company careers page.
+
+Include:
+
+* company culture
+* remote opportunities
+* linguistic specialists
+* AI engineers
+* annotation operations
+* research roles
+
+Tone:
+
+* ambitious
+* mission-driven
+* elite team culture
+
+---
+
+# 8. CONTACT PAGE
+
+---
+
+Enterprise-focused contact experience.
+
+Include:
+
+* enterprise inquiry
+* government inquiry
+* partnership inquiry
+* developer inquiry
+
+Email:
+[partner@aidpwords.com](mailto:partner@aidpwords.com)
+
+---
+
+# TECH STACK
+
+---
+
+Frontend:
+
+* Next.js
+
+Styling:
+
+* Tailwind CSS
+
+Animations:
+
+* Framer Motion
+
+Audio:
+
+* Web Audio API
+
+CMS:
+
+* Sanity
+
+Hosting:
+
+* Vercel
+
+Analytics:
+
+* PostHog
+
+---
+
+# UX REQUIREMENTS
+
+---
+
+The experience must feel:
+
+* instant
+* responsive
+* frictionless
+* enterprise-grade
+
+Users should immediately feel:
+
+* trust
+* scale
+* technical depth
+* premium quality
+
+---
+
+# FINAL GOAL
+
+---
+
+The final result should feel like:
+
+"The definitive infrastructure company powering Arabic AI globally."
+
+NOT:
+
+* a startup template
+* a chatbot website
+* a generic AI landing page
+
+The website should establish AI Deep Words as:
+
+* the category leader
+* the enterprise standard
+* the future of Arabic AI infrastructure
+* the Arabic equivalent of companies like Deepgram, ElevenLabs, and Scale AI
