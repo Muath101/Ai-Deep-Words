@@ -3,9 +3,10 @@ import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
-import abdulazizImg from "@assets/WhatsApp_Image_2026-06-13_at_11.49.15_PM_1781389308135.jpeg";
+import abdulazizImg from "@assets/Abdulaziz_1781444292397.jpeg";
 import asimImg      from "@assets/WhatsApp_Image_2026-06-13_at_11.51.04_PM_1781389308135.jpeg";
 import muathImg     from "@assets/WhatsApp_Image_2026-06-13_at_7.59.20_PM_1781389308135.jpeg";
+import abdullahImg  from "@assets/abdullah_1781444256577.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -48,7 +49,7 @@ const team = [
     name: "Abdullah Abdullatif",
     role: "Project Management",
     bio: "Drives operational coordination, contributor workflows, milestone execution, and delivery management across enterprise Arabic AI data programs.",
-    img: null,
+    img: abdullahImg,
   },
 ];
 
