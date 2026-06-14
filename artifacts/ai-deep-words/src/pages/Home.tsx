@@ -362,21 +362,21 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ───────────────── ARABIC AI GAP — Dark Blue ───────────────── */}
-      <Section className="section-darkblue">
+      {/* ───────────────── ARABIC AI GAP — Light Blue ───────────────── */}
+      <Section className="section-lightblue border-b border-blue-100">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div variants={fadeUp} custom={0} className="text-center mb-16">
-            <span className="px-4 py-1.5 rounded-full border border-blue-400/30 bg-blue-500/10 text-blue-200 text-xs uppercase tracking-widest font-medium mb-6 inline-block">The Challenge</span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4">The Arabic AI Gap</h2>
-            <p className="text-blue-100/70 max-w-xl mx-auto">
+            <span className="px-4 py-1.5 rounded-full border border-blue-300 bg-blue-100 text-blue-700 text-xs uppercase tracking-widest font-medium mb-6 inline-block">The Challenge</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">The Arabic AI Gap</h2>
+            <p className="text-slate-600 max-w-xl mx-auto">
               Arabic is one of the world's most spoken languages — yet critically underrepresented in AI training infrastructure.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div variants={fadeUp} custom={1}
-              className="rounded-2xl p-8 bg-red-500/10 border border-red-400/20 backdrop-blur-sm">
-              <h3 className="font-display text-xl font-semibold text-red-300 mb-6">The Problem</h3>
+              className="card-light rounded-2xl p-8 border-red-100">
+              <h3 className="font-display text-xl font-semibold text-red-600 mb-6">The Problem</h3>
               <ul className="space-y-4">
                 {["Arabic dialect fragmentation across 22+ countries",
                   "No production-grade dialect-specific datasets",
@@ -384,7 +384,7 @@ export default function Home() {
                   "Poor cross-dialect speech recognition accuracy",
                   "Missing enterprise-grade annotation standards",
                 ].map((p) => (
-                  <li key={p} className="flex gap-3 text-blue-100 text-sm">
+                  <li key={p} className="flex gap-3 text-slate-700 text-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" />{p}
                   </li>
                 ))}
@@ -392,8 +392,8 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeUp} custom={2}
-              className="rounded-2xl p-8 bg-emerald-500/10 border border-emerald-400/20 backdrop-blur-sm">
-              <h3 className="font-display text-xl font-semibold text-emerald-300 mb-6">The AI Deep Words Solution</h3>
+              className="card-light rounded-2xl p-8 border-emerald-100">
+              <h3 className="font-display text-xl font-semibold text-emerald-700 mb-6">The AI Deep Words Solution</h3>
               <ul className="space-y-4">
                 {["Native speaker pipelines across every Arab country",
                   "Dialect-aware QA and validation workflows",
@@ -401,8 +401,8 @@ export default function Home() {
                   "Large-scale annotation at millions of utterances",
                   "Medical-grade and legal-grade Arabic AI assets",
                 ].map((s) => (
-                  <li key={s} className="flex gap-3 text-blue-100 text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />{s}
+                  <li key={s} className="flex gap-3 text-slate-700 text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />{s}
                   </li>
                 ))}
               </ul>

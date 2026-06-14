@@ -129,28 +129,28 @@ export default function About() {
         </div>
       </Section>
 
-      {/* ─── TEAM — Dark Blue ─── */}
-      <Section className="section-darkblue">
+      {/* ─── TEAM — Off-white ─── */}
+      <Section className="section-offwhite border-b border-slate-100">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div variants={fadeUp} custom={0} className="text-center mb-16">
-            <span className="px-4 py-1.5 rounded-full border border-blue-400/30 bg-blue-500/10 text-blue-200 text-xs uppercase tracking-widest font-medium mb-6 inline-block">Team</span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-4">The People Behind the Infrastructure</h2>
-            <p className="text-blue-100/70 max-w-xl mx-auto">A team of engineers, linguists, and operators who have dedicated their careers to Arabic AI.</p>
+            <span className="px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-xs uppercase tracking-widest font-medium mb-6 inline-block">Team</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 mb-4">The People Behind the Infrastructure</h2>
+            <p className="text-slate-500 max-w-xl mx-auto">A team of engineers, linguists, and operators who have dedicated their careers to Arabic AI.</p>
           </motion.div>
 
           <div className="space-y-5">
             {team.map((member, i) => (
               <motion.div key={member.name} variants={fadeUp} custom={i * 0.3}
-                className="rounded-2xl border border-white/10 bg-white/6 hover:bg-white/10 backdrop-blur-sm transition-all overflow-hidden">
+                className="card-light rounded-2xl hover:shadow-md hover:border-blue-200 transition-all overflow-hidden">
                 <div className="flex flex-col sm:flex-row items-stretch">
                   {/* Photo — LEFT */}
-                  <div className="relative w-full sm:w-52 flex-shrink-0 h-52 sm:h-auto overflow-hidden bg-slate-800">
+                  <div className="relative w-full sm:w-52 flex-shrink-0 h-52 sm:h-auto overflow-hidden bg-slate-100">
                     {member.img ? (
                       <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center min-h-[13rem]">
-                        <div className="w-20 h-20 rounded-full bg-blue-600/30 border border-white/10 flex items-center justify-center">
-                          <span className="font-display text-2xl font-bold text-blue-300">
+                        <div className="w-20 h-20 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center">
+                          <span className="font-display text-2xl font-bold text-blue-600">
                             {member.name.split(" ").map((n) => n[0]).join("")}
                           </span>
                         </div>
@@ -160,9 +160,9 @@ export default function About() {
 
                   {/* Info — RIGHT */}
                   <div className="flex-1 p-8 flex flex-col justify-center">
-                    <span className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1">{member.role}</span>
-                    <h3 className="font-display text-2xl font-bold text-white mb-4">{member.name}</h3>
-                    <p className="text-blue-100/70 leading-relaxed max-w-xl">{member.bio}</p>
+                    <span className="text-blue-600 text-xs font-semibold uppercase tracking-widest mb-1">{member.role}</span>
+                    <h3 className="font-display text-2xl font-bold text-slate-900 mb-4">{member.name}</h3>
+                    <p className="text-slate-600 leading-relaxed max-w-xl">{member.bio}</p>
                   </div>
                 </div>
               </motion.div>

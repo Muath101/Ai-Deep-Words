@@ -29,7 +29,7 @@ function CopyButton({ text }: { text: string }) {
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <button onClick={copy} className="text-slate-500 hover:text-slate-300 transition-colors">
+    <button onClick={copy} className="text-slate-400 hover:text-slate-200 transition-colors p-1 rounded">
       {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Copy className="h-4 w-4" />}
     </button>
   );
@@ -107,20 +107,20 @@ curl -X POST https://api.deepwords.ai/v1/programs \\
 };
 
 const endpoints = [
-  { method: "GET", path: "/v1/datasets", desc: "List all available datasets" },
-  { method: "GET", path: "/v1/datasets/{id}", desc: "Get dataset metadata and stats" },
-  { method: "GET", path: "/v1/utterances", desc: "Stream utterances with filters" },
-  { method: "POST", path: "/v1/programs", desc: "Create custom dataset program" },
-  { method: "GET", path: "/v1/programs/{id}", desc: "Check program status" },
-  { method: "POST", path: "/v1/export", desc: "Export dataset in specified format" },
-  { method: "GET", path: "/v1/dialects", desc: "List all supported dialect codes" },
-  { method: "GET", path: "/v1/account", desc: "Account usage and quota" },
+  { method: "GET",  path: "/v1/datasets",      desc: "List all available datasets"          },
+  { method: "GET",  path: "/v1/datasets/{id}",  desc: "Get dataset metadata and stats"       },
+  { method: "GET",  path: "/v1/utterances",     desc: "Stream utterances with filters"       },
+  { method: "POST", path: "/v1/programs",       desc: "Create custom dataset program"        },
+  { method: "GET",  path: "/v1/programs/{id}",  desc: "Check program status"                 },
+  { method: "POST", path: "/v1/export",         desc: "Export dataset in specified format"   },
+  { method: "GET",  path: "/v1/dialects",       desc: "List all supported dialect codes"     },
+  { method: "GET",  path: "/v1/account",        desc: "Account usage and quota"              },
 ];
 
 const methodColor: Record<string, string> = {
-  GET: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
-  POST: "text-blue-400 bg-blue-400/10 border-blue-400/20",
-  DELETE: "text-red-400 bg-red-400/10 border-red-400/20",
+  GET:    "text-emerald-700 bg-emerald-100 border-emerald-200",
+  POST:   "text-blue-700   bg-blue-100   border-blue-200",
+  DELETE: "text-red-700    bg-red-100    border-red-200",
 };
 
 export default function Developers() {
@@ -128,75 +128,71 @@ export default function Developers() {
 
   return (
     <div>
-      <section className="relative py-24 md:py-32 text-center px-6 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/8 rounded-full blur-[100px]" />
-        </div>
+      {/* ─── HERO ─── */}
+      <section className="section-lightblue py-28 md:py-36 text-center px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-400 text-xs uppercase tracking-widest font-medium mb-6 inline-block">Developers</span>
-          <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">Build With Arabic AI</h1>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <span className="px-4 py-1.5 rounded-full border border-blue-300 bg-blue-100 text-blue-700 text-xs uppercase tracking-widest font-medium mb-6 inline-block">Developers</span>
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-slate-900 mb-6">Build With Arabic AI</h1>
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             A clean REST API, native SDKs for Python and Node.js, and enterprise-grade infrastructure designed for production AI pipelines.
           </p>
         </motion.div>
       </section>
 
-      <Section>
+      {/* ─── FEATURES ─── */}
+      <Section className="section-white border-b border-slate-100">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
             {[
-              { icon: Zap, label: "Sub-100ms Response", desc: "Metadata and listing endpoints respond in under 100ms globally." },
-              { icon: Lock, label: "API Key Auth", desc: "Bearer token authentication with scoped read/write permissions." },
-              { icon: Globe2, label: "CDN-Delivered Audio", desc: "Audio assets served from 30+ edge locations globally." },
+              { icon: Zap,    label: "Sub-100ms Response", desc: "Metadata and listing endpoints respond in under 100ms globally."         },
+              { icon: Lock,   label: "API Key Auth",        desc: "Bearer token authentication with scoped read/write permissions."         },
+              { icon: Globe2, label: "CDN-Delivered Audio", desc: "Audio assets served from 30+ edge locations globally."                   },
             ].map((f, i) => (
-              <motion.div key={f.label} variants={fadeUp} custom={i} className="glass-card rounded-xl p-6 border border-white/8 flex gap-4">
-                <f.icon className="h-6 w-6 text-blue-400 shrink-0 mt-0.5" />
+              <motion.div key={f.label} variants={fadeUp} custom={i} className="card-light rounded-xl p-6 flex gap-4 hover:shadow-md transition-shadow">
+                <div className="p-2.5 rounded-xl bg-blue-50 shrink-0 self-start">
+                  <f.icon className="h-5 w-5 text-blue-600" />
+                </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">{f.label}</h4>
-                  <p className="text-slate-400 text-sm">{f.desc}</p>
+                  <h4 className="font-semibold text-slate-900 mb-1">{f.label}</h4>
+                  <p className="text-slate-600 text-sm">{f.desc}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          <motion.div variants={fadeUp} custom={0} className="glass-card rounded-2xl border border-white/10 overflow-hidden mb-12">
-            <div className="flex border-b border-white/8 bg-white/3">
+          {/* Code editor — intentionally dark (terminal) */}
+          <motion.div variants={fadeUp} custom={0} className="rounded-2xl border border-slate-700 overflow-hidden mb-12 shadow-lg">
+            <div className="flex border-b border-slate-700 bg-slate-800">
               {Object.keys(snippets).map((lang) => (
-                <button
-                  key={lang}
-                  onClick={() => setActiveSnippet(lang)}
-                  className={`px-6 py-3.5 text-sm font-medium border-r border-white/8 transition-all ${
-                    activeSnippet === lang ? "bg-blue-600/20 text-blue-300" : "text-slate-500 hover:text-slate-300"
-                  }`}
-                >
+                <button key={lang} onClick={() => setActiveSnippet(lang)}
+                  className={`px-6 py-3.5 text-sm font-medium border-r border-slate-700 transition-all ${
+                    activeSnippet === lang ? "bg-blue-600/30 text-blue-300" : "text-slate-400 hover:text-slate-200 hover:bg-slate-700"
+                  }`}>
                   {lang}
                 </button>
               ))}
-            </div>
-            <div className="relative p-6">
-              <div className="absolute top-4 right-4">
+              <div className="ml-auto flex items-center pr-4">
                 <CopyButton text={snippets[activeSnippet].code} />
               </div>
-              <pre className="text-sm text-slate-300 font-mono overflow-x-auto leading-relaxed whitespace-pre">
+            </div>
+            <div className="bg-slate-900 p-6">
+              <pre className="text-sm text-slate-200 font-mono overflow-x-auto leading-relaxed whitespace-pre">
                 <code>{snippets[activeSnippet].code}</code>
               </pre>
             </div>
           </motion.div>
 
+          {/* API Endpoints */}
           <motion.div variants={fadeUp} custom={1}>
-            <h2 className="font-display text-2xl font-bold mb-6 text-white">API Endpoints</h2>
+            <h2 className="font-display text-2xl font-bold text-slate-900 mb-6">API Endpoints</h2>
             <div className="space-y-2">
               {endpoints.map((ep, i) => (
-                <motion.div
-                  key={ep.path}
-                  variants={fadeUp}
-                  custom={i * 0.1}
-                  className="flex items-center gap-4 p-4 rounded-xl glass-card border border-white/8 hover:border-white/15 transition-all"
-                >
+                <motion.div key={ep.path} variants={fadeUp} custom={i * 0.1}
+                  className="flex items-center gap-4 p-4 rounded-xl card-light hover:shadow-sm hover:border-blue-200 transition-all">
                   <span className={`px-2.5 py-1 rounded text-xs font-bold border font-mono shrink-0 ${methodColor[ep.method]}`}>
                     {ep.method}
                   </span>
-                  <code className="text-blue-300 font-mono text-sm">{ep.path}</code>
+                  <code className="text-blue-700 font-mono text-sm">{ep.path}</code>
                   <span className="text-slate-500 text-sm hidden md:block">{ep.desc}</span>
                 </motion.div>
               ))}
@@ -205,36 +201,42 @@ export default function Developers() {
         </div>
       </Section>
 
-      <Section className="bg-gradient-to-b from-transparent via-[#0B0F14]/40 to-transparent">
+      {/* ─── SDK & AUTH ─── */}
+      <Section className="section-offwhite border-b border-slate-100">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div variants={fadeUp} custom={0} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="glass-card rounded-2xl p-8 border border-white/8">
+
+            {/* SDK Installation */}
+            <div className="card-light rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
-                <Terminal className="h-5 w-5 text-blue-400" />
-                <h3 className="font-display text-lg font-semibold text-white">SDK Installation</h3>
+                <div className="p-2 rounded-lg bg-blue-50">
+                  <Terminal className="h-5 w-5 text-blue-600" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-slate-900">SDK Installation</h3>
               </div>
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">Python</p>
-                  <div className="bg-white/3 rounded-xl p-4 font-mono text-sm text-emerald-300 border border-white/8">
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-2">Python</p>
+                  <div className="bg-slate-900 rounded-xl p-4 font-mono text-sm text-emerald-400 border border-slate-700">
                     pip install deepwords
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">Node.js</p>
-                  <div className="bg-white/3 rounded-xl p-4 font-mono text-sm text-emerald-300 border border-white/8">
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-2">Node.js</p>
+                  <div className="bg-slate-900 rounded-xl p-4 font-mono text-sm text-emerald-400 border border-slate-700">
                     npm install @deepwords/sdk
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-8 border border-white/8">
-              <h3 className="font-display text-lg font-semibold text-white mb-6">Authentication</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-4">
+            {/* Authentication */}
+            <div className="card-light rounded-2xl p-8">
+              <h3 className="font-display text-lg font-semibold text-slate-900 mb-6">Authentication</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">
                 All API requests require a Bearer token. Generate your API key from the enterprise dashboard after account approval.
               </p>
-              <div className="bg-white/3 rounded-xl p-4 font-mono text-sm text-slate-300 border border-white/8 mb-4">
+              <div className="bg-slate-900 rounded-xl p-4 font-mono text-sm text-slate-300 border border-slate-700 mb-4">
                 Authorization: Bearer dw_sk_XXXXXXXXX
               </div>
               <p className="text-slate-500 text-xs">Keys are scoped per project. Rotate them in the dashboard at any time.</p>
@@ -243,12 +245,13 @@ export default function Developers() {
         </div>
       </Section>
 
-      <Section>
+      {/* ─── CTA ─── */}
+      <Section className="section-lightblue">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div variants={fadeUp} custom={0} className="text-center">
-            <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">Ready to integrate?</h2>
-            <p className="text-slate-400 mb-8">Apply for API access — enterprise accounts are approved within 2 business days.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold transition-all glow-blue">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4">Ready to integrate?</h2>
+            <p className="text-slate-600 mb-8">Apply for API access — enterprise accounts are approved within 2 business days.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-md">
               Apply for API Access
             </Link>
           </motion.div>
