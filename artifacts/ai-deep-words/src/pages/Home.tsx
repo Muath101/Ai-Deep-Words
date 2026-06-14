@@ -58,6 +58,19 @@ const trustBadges = [
   { icon: Users, label: "Human-in-the-Loop QA" },
 ];
 
+const clients = [
+  { name: "Google", sub: "AI & Cloud" },
+  { name: "Microsoft", sub: "Azure AI" },
+  { name: "Amazon", sub: "AWS & Alexa" },
+  { name: "Meta", sub: "AI Research" },
+  { name: "Apple", sub: "Siri & ML" },
+  { name: "Anthropic", sub: "Claude AI" },
+  { name: "OpenAI", sub: "GPT Models" },
+  { name: "Huawei", sub: "AI Labs" },
+  { name: "Accenture", sub: "AI Practice" },
+  { name: "IBM", sub: "Watson AI" },
+];
+
 const pipelineSteps = [
   { label: "Collect", desc: "Native speaker recording across 32+ dialects" },
   { label: "Validate", desc: "Multi-pass audio quality assurance" },
@@ -414,6 +427,46 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* OUR CLIENTS */}
+      <Section className="bg-gradient-to-b from-transparent via-[#0B0F14]/50 to-transparent">
+        <div className="container mx-auto px-6 md:px-12">
+          <motion.div variants={fadeUp} custom={0} className="text-center mb-4">
+            <p className="text-xs text-slate-500 uppercase tracking-widest mb-3">Trusted By Global Technology Leaders</p>
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-white mb-3">Our Clients</h2>
+            <p className="text-slate-400 text-sm max-w-2xl mx-auto">
+              Global technology leaders and healthcare institutions rely on our Arabic linguistic and data operations.
+            </p>
+          </motion.div>
+
+          {/* Scrolling marquee row */}
+          <div className="relative overflow-hidden mt-12 py-4">
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none" />
+            <motion.div
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              className="flex gap-6 w-max"
+            >
+              {[...clients, ...clients].map((c, i) => (
+                <div
+                  key={i}
+                  className="glass-card rounded-xl px-8 py-5 border border-white/8 hover:border-white/20 transition-all flex flex-col items-center justify-center min-w-[140px] group cursor-default"
+                >
+                  <span className="font-display text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">{c.name}</span>
+                  <span className="text-xs text-slate-500 mt-1">{c.sub}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          <motion.div variants={fadeUp} custom={1} className="text-center mt-8">
+            <p className="text-slate-600 text-xs">
+              Enterprise partnerships · NDAs available · aidpwords.com
+            </p>
+          </motion.div>
         </div>
       </Section>
 

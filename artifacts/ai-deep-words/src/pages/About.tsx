@@ -2,9 +2,11 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import abdulazizImg from "@assets/WhatsApp_Image_2026-06-13_at_7.59.20_PM_1781389308135.jpeg";
-import asimImg from "@assets/WhatsApp_Image_2026-06-13_at_11.49.15_PM_1781389308135.jpeg";
-import muathImg from "@assets/WhatsApp_Image_2026-06-13_at_11.51.04_PM_1781389308135.jpeg";
+
+// Corrected photo assignments per team member identification
+import abdulazizImg from "@assets/WhatsApp_Image_2026-06-13_at_11.49.15_PM_1781389308135.jpeg";
+import asimImg from "@assets/WhatsApp_Image_2026-06-13_at_11.51.04_PM_1781389308135.jpeg";
+import muathImg from "@assets/WhatsApp_Image_2026-06-13_at_7.59.20_PM_1781389308135.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -61,6 +63,7 @@ const values = [
 export default function About() {
   return (
     <div>
+      {/* HERO */}
       <section className="relative py-24 md:py-32 text-center px-6 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/8 rounded-full blur-[100px]" />
@@ -74,6 +77,7 @@ export default function About() {
         </motion.div>
       </section>
 
+      {/* MISSION */}
       <Section>
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -107,6 +111,7 @@ export default function About() {
         </div>
       </Section>
 
+      {/* PHILOSOPHY */}
       <Section className="bg-gradient-to-b from-transparent via-[#0B0F14]/40 to-transparent">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div variants={fadeUp} custom={0} className="text-center mb-16">
@@ -124,6 +129,7 @@ export default function About() {
         </div>
       </Section>
 
+      {/* TEAM — photo left, info right */}
       <Section>
         <div className="container mx-auto px-6 md:px-12">
           <motion.div variants={fadeUp} custom={0} className="text-center mb-16">
@@ -132,37 +138,44 @@ export default function About() {
             <p className="text-slate-400 max-w-xl mx-auto">A team of engineers, linguists, and operators who have dedicated their careers to Arabic AI.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="space-y-6">
             {team.map((member, i) => (
               <motion.div
                 key={member.name}
                 variants={fadeUp}
-                custom={i * 0.5}
-                whileHover={{ y: -4 }}
-                className="glass-card rounded-2xl overflow-hidden border border-white/8 hover:border-white/15 transition-all"
+                custom={i * 0.3}
+                className="glass-card rounded-2xl border border-white/8 hover:border-white/15 transition-all overflow-hidden"
               >
-                <div className="relative h-56 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                  {member.img ? (
-                    <img
-                      src={member.img}
-                      alt={member.name}
-                      className="w-full h-full object-cover object-top filter grayscale hover:grayscale-0 transition-all duration-500"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600/30 to-purple-600/30 border border-white/10 flex items-center justify-center">
-                        <span className="font-display text-2xl font-bold text-blue-400">
-                          {member.name.split(" ").map((n) => n[0]).join("")}
-                        </span>
+                <div className="flex flex-col sm:flex-row items-stretch">
+                  {/* Photo — LEFT */}
+                  <div className="relative w-full sm:w-56 flex-shrink-0 h-56 sm:h-auto bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                    {member.img ? (
+                      <img
+                        src={member.img}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center min-h-[14rem]">
+                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-600/30 to-purple-600/30 border border-white/10 flex items-center justify-center">
+                          <span className="font-display text-2xl font-bold text-blue-400">
+                            {member.name.split(" ").map((n) => n[0]).join("")}
+                          </span>
+                        </div>
                       </div>
+                    )}
+                    {/* Subtle gradient overlay on right edge to blend */}
+                    <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-r from-transparent to-[#0B0F14]/60 pointer-events-none hidden sm:block" />
+                  </div>
+
+                  {/* Info — RIGHT */}
+                  <div className="flex-1 p-8 flex flex-col justify-center">
+                    <div className="mb-1">
+                      <span className="text-blue-400 text-xs font-semibold uppercase tracking-widest">{member.role}</span>
                     </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-white mb-1">{member.name}</h3>
-                  <p className="text-blue-400 text-xs font-medium mb-3">{member.role}</p>
-                  <p className="text-slate-400 text-sm leading-relaxed">{member.bio}</p>
+                    <h3 className="font-display text-2xl font-bold text-white mb-4">{member.name}</h3>
+                    <p className="text-slate-400 leading-relaxed max-w-xl">{member.bio}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -170,6 +183,7 @@ export default function About() {
         </div>
       </Section>
 
+      {/* FUTURE */}
       <Section className="bg-gradient-to-b from-transparent via-[#0B0F14]/40 to-transparent">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div variants={fadeUp} custom={0} className="text-center mb-12">
