@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Linkedin, Twitter, Github } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 function FooterLogo() {
   return (
@@ -19,66 +20,86 @@ function FooterLogo() {
 }
 
 export default function Footer() {
+  const { tr } = useLang();
+
+  const columns = [
+    {
+      title: tr("Products", "المنتجات"),
+      links: [
+        { label: tr("Voice Intelligence", "الذكاء الصوتي"), href: "/services" },
+        { label: tr("NLP Solutions", "حلول معالجة اللغة"),  href: "/services" },
+        { label: tr("Datasets", "البيانات"),                href: "/datasets" },
+        { label: tr("Medical AI", "الذكاء الطبي"),          href: "/services" },
+      ],
+    },
+    {
+      title: tr("Developers", "المطوّرون"),
+      links: [
+        { label: tr("Documentation", "التوثيق"),    href: "/developers" },
+        { label: tr("API Reference", "مرجع الـ API"), href: "/docs" },
+        { label: tr("SDKs", "حِزم التطوير"),         href: "/docs" },
+        { label: tr("Status", "الحالة"),             href: "/developers" },
+      ],
+    },
+    {
+      title: tr("Company", "الشركة"),
+      links: [
+        { label: tr("About Us", "من نحن"),  href: "/about" },
+        { label: tr("Careers", "الوظائف"),  href: "/careers" },
+        { label: tr("Contact", "تواصل معنا"), href: "/contact" },
+      ],
+    },
+  ];
+
   return (
-    <footer className="border-t border-slate-800 bg-[#0F172A] pt-20 pb-10">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1">
-            <Link href="/" className="flex items-center mb-6">
+    <footer className="border-t border-slate-800 bg-[#0F172A] pt-14 md:pt-20 pb-10">
+      <div className="container mx-auto px-5 md:px-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
+          <div className="col-span-2 md:col-span-1">
+            <Link href="/" className="flex items-center mb-5">
               <FooterLogo />
             </Link>
-            <p className="text-slate-500 text-sm leading-relaxed mb-4">
-              The infrastructure layer powering Arabic AI globally. Production-grade voice datasets and dialect-aware NLP pipelines.
+            <p className="text-slate-500 text-sm leading-relaxed mb-4 max-w-xs">
+              {tr("The infrastructure layer powering Arabic AI globally. Production-grade voice datasets and dialect-aware NLP pipelines.",
+                  "طبقة البنية التحتية التي تُشغّل الذكاء الاصطناعي العربي عالمياً. بيانات صوتية بجودة إنتاجية وخطوط معالجة لغوية واعية باللهجات.")}
             </p>
-            <a href="https://aidpwords.com" className="text-slate-600 hover:text-slate-400 text-xs transition-colors block mb-6">
+            <a href="https://aidpwords.com" className="text-slate-600 hover:text-slate-400 text-xs transition-colors block mb-5">
               aidpwords.com
             </a>
             <div className="flex gap-4">
-              <a href="#" className="text-slate-700 hover:text-blue-400 transition-colors"><Twitter className="h-4 w-4" /></a>
-              <a href="#" className="text-slate-700 hover:text-blue-400 transition-colors"><Linkedin className="h-4 w-4" /></a>
-              <a href="#" className="text-slate-700 hover:text-blue-400 transition-colors"><Github className="h-4 w-4" /></a>
+              <a href="#" aria-label="Twitter" className="text-slate-700 hover:text-blue-400 transition-colors p-1"><Twitter className="h-4 w-4" /></a>
+              <a href="#" aria-label="LinkedIn" className="text-slate-700 hover:text-blue-400 transition-colors p-1"><Linkedin className="h-4 w-4" /></a>
+              <a href="#" aria-label="GitHub" className="text-slate-700 hover:text-blue-400 transition-colors p-1"><Github className="h-4 w-4" /></a>
             </div>
           </div>
 
-          <div>
-            <h4 className="text-white font-medium mb-6 text-xs uppercase tracking-widest">Products</h4>
-            <ul className="space-y-4">
-              <li><Link href="/services" className="text-slate-500 hover:text-white text-sm transition-colors">Voice Intelligence</Link></li>
-              <li><Link href="/services" className="text-slate-500 hover:text-white text-sm transition-colors">NLP Solutions</Link></li>
-              <li><Link href="/datasets" className="text-slate-500 hover:text-white text-sm transition-colors">Datasets</Link></li>
-              <li><Link href="/services" className="text-slate-500 hover:text-white text-sm transition-colors">Medical AI</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-medium mb-6 text-xs uppercase tracking-widest">Developers</h4>
-            <ul className="space-y-4">
-              <li><Link href="/developers" className="text-slate-500 hover:text-white text-sm transition-colors">Documentation</Link></li>
-              <li><Link href="/docs"       className="text-slate-500 hover:text-white text-sm transition-colors">API Reference</Link></li>
-              <li><Link href="/docs"       className="text-slate-500 hover:text-white text-sm transition-colors">SDKs</Link></li>
-              <li><Link href="/developers" className="text-slate-500 hover:text-white text-sm transition-colors">Status</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-medium mb-6 text-xs uppercase tracking-widest">Company</h4>
-            <ul className="space-y-4">
-              <li><Link href="/about"   className="text-slate-500 hover:text-white text-sm transition-colors">About Us</Link></li>
-              <li><Link href="/careers" className="text-slate-500 hover:text-white text-sm transition-colors">Careers</Link></li>
-              <li><Link href="/contact" className="text-slate-500 hover:text-white text-sm transition-colors">Contact</Link></li>
-              <li><a href="mailto:partner@aidpwords.com" className="text-slate-500 hover:text-white text-sm transition-colors">partner@aidpwords.com</a></li>
-            </ul>
-          </div>
+          {columns.map((col) => (
+            <div key={col.title}>
+              <h4 className="text-white font-medium mb-5 md:mb-6 text-xs uppercase tracking-widest">{col.title}</h4>
+              <ul className="space-y-3.5 md:space-y-4">
+                {col.links.map((l) => (
+                  <li key={l.label}>
+                    <Link href={l.href} className="text-slate-500 hover:text-white text-sm transition-colors">{l.label}</Link>
+                  </li>
+                ))}
+                {col.title === tr("Company", "الشركة") && (
+                  <li>
+                    <a href="mailto:partner@aidpwords.com" className="text-slate-500 hover:text-white text-sm transition-colors">partner@aidpwords.com</a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-600 text-sm">
+          <p className="text-slate-600 text-sm text-center md:text-start">
             © {new Date().getFullYear()} AI Deep Words ·{" "}
             <a href="https://aidpwords.com" className="hover:text-slate-400 transition-colors">aidpwords.com</a>
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-slate-600 hover:text-slate-400 text-sm transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-slate-600 hover:text-slate-400 text-sm transition-colors">Terms of Service</Link>
+            <Link href="#" className="text-slate-600 hover:text-slate-400 text-sm transition-colors">{tr("Privacy Policy", "سياسة الخصوصية")}</Link>
+            <Link href="#" className="text-slate-600 hover:text-slate-400 text-sm transition-colors">{tr("Terms of Service", "شروط الخدمة")}</Link>
           </div>
         </div>
       </div>
