@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>AI Deep Words | Arabic AI Infrastructure — Voice & NLP Datasets</title>
+    <title>Ai Deep Words</title>
     <meta name="description" content="AI Deep Words is the leading Arabic AI infrastructure company — production-grade Arabic voice datasets, NLP annotation pipelines, and dialect-aware AI infrastructure across 22+ Arab countries and 32+ dialects." />
     <meta name="keywords" content="Arabic AI, Arabic NLP, Arabic voice datasets, Arabic speech recognition, Arabic language AI, dialect annotation, Arabic machine learning" />
     <meta name="robots" content="index, follow" />
@@ -38,7 +38,7 @@
     }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
 
     <!-- Fonts: English + Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,6 +46,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!-- Hidden static form so Netlify detects "enterprise-inquiry" at build time.
+         The React form (Contact.tsx) submits to it via fetch. -->
+    <form name="enterprise-inquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="fullName" />
+      <input type="email" name="email" />
+      <input type="text" name="organization" />
+      <input type="text" name="inquiryType" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

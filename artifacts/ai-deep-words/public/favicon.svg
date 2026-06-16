@@ -1,3 +1,10 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <rect width="180" height="180" rx="40" fill="#0B1B3B"/>
+  <g transform="translate(34.5 45) scale(3)">
+    <rect x="0"  y="14" width="5" height="8"  rx="2.5" fill="#7AABF7"/>
+    <rect x="8"  y="8"  width="5" height="16" rx="2.5" fill="#5F97F4"/>
+    <rect x="16" y="1"  width="5" height="30" rx="2.5" fill="#4B84F0"/>
+    <rect x="24" y="6"  width="5" height="20" rx="2.5" fill="#5F97F4"/>
+    <rect x="32" y="13" width="5" height="9"  rx="2.5" fill="#7AABF7"/>
+  </g>
 </svg>

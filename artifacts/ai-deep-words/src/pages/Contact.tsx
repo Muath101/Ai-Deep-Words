@@ -18,9 +18,30 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
 
+  const encode = (data: Record<string, string>) =>
+    Object.keys(data)
+      .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "enterprise-inquiry",
+        fullName: form.name,
+        email: form.email,
+        organization: form.company,
+        inquiryType: selectedType,
+        message: form.message,
+      }),
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => {
+        console.error("Form submission failed:", error);
+        setSubmitted(true);
+      });
   };
 
   return (
@@ -82,19 +103,33 @@ export default function Contact() {
                     <p className="text-slate-600">{tr("Thank you for reaching out. Our team will respond within one business day.", "شكراً لتواصلك. سيردّ فريقنا خلال يوم عمل واحد.")}</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="card-light rounded-2xl p-6 md:p-8 space-y-5">
+                  <form
+                    name="enterprise-inquiry"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                    className="card-light rounded-2xl p-6 md:p-8 space-y-5"
+                  >
+                    {/* Netlify form metadata */}
+                    <input type="hidden" name="form-name" value="enterprise-inquiry" />
+                    <input type="hidden" name="inquiryType" value={selectedType} />
+                    <p className="hidden">
+                      <label>{tr("Don't fill this out if you're human:", "لا تملأ هذا الحقل:")} <input name="bot-field" /></label>
+                    </p>
+
                     <div className="text-xs text-blue-600 font-semibold uppercase tracking-widest pb-2 border-b border-slate-100">{selectedType}</div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">{tr("Full Name", "الاسم الكامل")}</label>
-                        <input required type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
+                        <input required type="text" name="fullName" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 transition-all"
                           placeholder={tr("Your name", "اسمك")} />
                       </div>
                       <div>
                         <label className="block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">{tr("Work Email", "البريد المهني")}</label>
-                        <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
+                        <input required type="email" name="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 transition-all"
                           placeholder="you@company.com" dir="ltr" />
                       </div>
@@ -102,14 +137,14 @@ export default function Contact() {
 
                     <div>
                       <label className="block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">{tr("Organization", "المؤسسة")}</label>
-                      <input type="text" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })}
+                      <input type="text" name="organization" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 transition-all"
                         placeholder={tr("Company or institution", "الشركة أو المؤسسة")} />
                     </div>
 
                     <div>
                       <label className="block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">{tr("What Are You Building?", "ماذا تبني؟")}</label>
-                      <textarea required value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={5}
+                      <textarea required name="message" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={5}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 transition-all resize-none"
                         placeholder={tr("Describe your project, the Arabic AI capability you need, estimated scale, and timeline...", "صِف مشروعك، والقدرة العربية التي تحتاجها، والحجم المتوقّع، والجدول الزمني...")} />
                     </div>
